@@ -1,0 +1,30 @@
+
+●UserRepository 클래스
+   - Grade 필드 반영
+
+●UserService 클래스
+   - resetPassword 메소드 추가: 생년월일을 이용한 비밀번호 재설정
+   - isBirthDateMatch 메소드 추가: 입력한 생년월일이 일치하는지 확인
+   - 입력한 생년월일: String/ SQL에 저장된 생년월일: Date 
+     SimpleDateFormat 라이브러리를 사용하여 String과 Date 비교 (인증코드를 이용할 경우 필요 없음)
+
+●Book 클래스
+   - title, stock, author, publisher 필드 추가
+
+●BookRepository 클래스
+   - 기존의 UserRepository 메소드와 유사한 save, delete, updateBookState, existByBookId, findByBookId 메소드 추가
+   - 검색을 위한 findByTitle,findByAuthor,findByPublisher 메소드 추가
+   -createBookFromResultSet 메소드 추가 (rs를 이용해서 book객체 만드는 과정을 메소드로 바꿈)
+   - 검색 결과가 List<Book>이므로, List와 ArrayList 라이브러리 추가
+
+
+●BookService 클래스
+   - registerBook, removeBook, getBookInfo, searchBookByTitle, searchBookByAuthor, searchBookByPublisher 메소드 추가
+   - 검색 결과가 List<Book>이므로, List와 ArrayList 라이브러리 추가
+
+●필요한것
+- User, Book 수정 메소드 추가 필요
+- 장르필드
+
+Execution failed for task ':BookShopApplication.main()'.
+> Build cancelled while executing task ':BookShopApplication.main()' 오류 발생
