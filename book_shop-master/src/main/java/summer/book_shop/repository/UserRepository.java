@@ -1,5 +1,6 @@
 package summer.book_shop.repository;
 
+import org.springframework.stereotype.Repository;
 import summer.book_shop.domain.Grade;
 import summer.book_shop.domain.User;
 
@@ -29,7 +30,7 @@ public class UserRepository {
     }
 
     public void save(User user) {
-        String sql = "insert into user values(?, ?, ?, ?, ?);";
+        String sql = "insert into user values(?, ?, ?, ?, ?,?);";
 
         try {
             pstmt = conn.prepareStatement(sql);

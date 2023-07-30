@@ -1,15 +1,19 @@
 package summer.book_shop.domain;
 
+import lombok.*;
+
 import java.util.Date;
 
+//@Getter
+//@Setter
+//@NoArgsConstructor
+//@AllArgsConstructor
+@Data
+@ToString
 public class User {
 
     private String userId; // PK
     private String password;
-    private String phoneNum;
-    private String nickname;
-    private Date birthDate;
-    private Grade grade;
 
     public String getUserId() {
         return userId;
@@ -58,4 +62,10 @@ public class User {
     public void setGrade(Grade grade) {
         this.grade = grade;
     }
+
+    private String phoneNum;
+    private String nickname;
+    private Date birthDate;
+    private Grade grade;
+
 }
